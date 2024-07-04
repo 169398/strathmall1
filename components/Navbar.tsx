@@ -32,6 +32,8 @@ const Navbar = () => {
 
                 <NavItems/>
               </div>
+
+              
             </div>
           </div>
         </MaxWidthWrapper>
