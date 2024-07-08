@@ -4,8 +4,9 @@ import {
 } from 'payload/dist/collections/config/types'
 import { PRODUCT_CATEGORIES } from '../../config'
 import { Access, CollectionConfig } from 'payload/types'
-import { stripe } from '../../lib/stripe'
 import { Product, User } from '@/src/payload-types'
+import { stripe } from '@/lib/stripe'
+
 
 const addUser: BeforeChangeHook<Product> = async ({
   req,
@@ -100,7 +101,7 @@ export const Products: CollectionConfig = {
             await stripe.products.create({
               name: data.name,
               default_price_data: {
-                currency: 'USD',
+                currency: 'KSH',
                 unit_amount: Math.round(data.price * 100),
               },
             })

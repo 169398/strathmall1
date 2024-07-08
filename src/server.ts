@@ -10,7 +10,7 @@ import nextBuild from "next/dist/build";
 import path from "path";
 import { PayloadRequest } from "payload/types";
 import { parse } from "url";
-import { nextApp } from "./next-utils";
+import { nextApp, nextHandler } from "./next-utils";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
