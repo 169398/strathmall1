@@ -3,6 +3,7 @@ import MaxWidthWrapper from "../../components/MaxWidthWrapper";
 import Link from "next/link";
 import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
+import ProductReel from "@/components/ProductReel";
 
 const perks = [
   {
@@ -45,8 +46,11 @@ export default function Home() {
             <Button variant="ghost">our quality promise &rarr;</Button>
           </div>
         </div>
-
-        {/* TO DO: List products */}
+        <ProductReel
+          query={{ sort: "desc", limit: 4 }}
+          href="/products?sort=recent"
+          title="Brand new"
+        />
       </MaxWidthWrapper>
 
       <section className="border-t border-grray-200 bg-gray-50">

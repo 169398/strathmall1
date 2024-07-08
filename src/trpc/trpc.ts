@@ -1,7 +1,7 @@
-import { User } from "@/payload-types";
 import { TRPCError, initTRPC } from "@trpc/server";
 import { PayloadRequest } from "payload/types";
 import { ExpressContext } from "../server";
+import { User } from "../payload-types";
 
 const t = initTRPC.context<ExpressContext>().create();
 const middleware = t.middleware;
@@ -25,3 +25,4 @@ const isAuth = middleware(async ({ ctx, next }) => {
 export const router = t.router;
 export const publicProcedure = t.procedure;
 export const privateProcedure = t.procedure.use(isAuth);
+ 
