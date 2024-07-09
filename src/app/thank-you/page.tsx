@@ -1,10 +1,10 @@
 import { getServerSideUser } from '@/lib/payload-utils'
 import Image from 'next/image'
 import { cookies } from 'next/headers'
-import { getPayloadClient } from '@/src/get-payload'
+import { getPayloadClient } from '@/get-payload'
 import { notFound, redirect } from 'next/navigation'
-import { Product, ProductFile, User } from "@/src/payload-types";
-import { PRODUCT_CATEGORIES } from "@/src/config";
+import { Product, ProductFile, User } from "@/payload-types";
+import { PRODUCT_CATEGORIES } from "@/config";
 import { formatPrice } from '@/lib/utils'
 import Link from 'next/link'
 import PaymentStatus from '@/components/PaymentStatus'
@@ -40,7 +40,7 @@ const ThankYouPage = async ({
   const orderUserId =
     typeof order.user === 'string'
       ? order.user
-      : order.user.id
+      : order.user.id 
 
   if (orderUserId !== user?.id) {
     return redirect(

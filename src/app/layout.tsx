@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn, constructMetadata } from "../../lib/utils";
+import { cn, constructMetadata } from "../lib/utils";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = constructMetadata();
 
