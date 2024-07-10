@@ -22,9 +22,10 @@ const PaymentStatus = ({
     {
       enabled: isPaid === false,
       refetchInterval: (data) =>
+        // @ts-ignore
         data?.isPaid ? false : 1000,
     }
-  )
+  );
 
   useEffect(() => {
     if (data?.isPaid) router.refresh()

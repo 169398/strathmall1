@@ -150,11 +150,14 @@ const Page = async ({ params }: PageProps) => {
           </div>
         </div>
       </div>
-      
+
       <ProductReel
         href="/products"
-        
-        query={{ category: product.category, limit: 4 }}
+        query={{
+          category:
+            typeof product.category === "string" ? product.category : undefined,
+          limit: 4,
+        }}
         title={`Similar ${label}`}
         subtitle={`Browse similar high-quality ${label} just like '${product.name}'`}
       />
