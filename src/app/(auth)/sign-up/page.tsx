@@ -18,6 +18,7 @@ import { trpc } from "@/trpc/client";
 import { toast } from "sonner";
 import { ZodError } from "zod";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Page = () => {
   const {
@@ -30,7 +31,7 @@ const Page = () => {
 
   const router = useRouter();
 
-  const { mutate, isLoading } = trpc.auth.createPayloadUser.useMutation({
+  const { mutate, isPending } = trpc.auth.createPayloadUser.useMutation({
     onError: (err) => {
       if (err.data?.code === "CONFLICT") {
         toast.error("This email is already in use. Sign in instead?");
@@ -61,7 +62,13 @@ const Page = () => {
       <div className="container relative flex pt-20 flex-col items-center justify-center lg:px-0">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col items-center space-y-2 text-center">
-            <Icons.logo className="h-20 w-20" />
+            <Image
+              src="/logo.png"
+              alt="strathmall logo"
+              width={200}
+              height={200}
+              className="h-20 w-20"
+            />
             <h1 className="text-2xl font-semibold tracking-tight">
               Create an account
             </h1>

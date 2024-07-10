@@ -43,7 +43,7 @@ export default function Home() {
               Browse Trending
             </Link>
 
-            <Button variant="ghost">our quality promise &rarr;</Button>
+            <Button variant="ghost">our quality Products &rarr;</Button>
           </div>
         </div>
         <ProductReel
