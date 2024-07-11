@@ -6,7 +6,7 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Editor picks",
         href: "/",
-        imageSrc: "/nav/ui-kits/macbook.jpg",
+        imageSrc: "/nav/ui-kits/blue.jpg",
       },
       {
         name: "New Arrivals",
@@ -27,17 +27,17 @@ export const PRODUCT_CATEGORIES = [
       {
         name: "Favourite Shop picks",
         href: "/",
-        imageSrc: "/nav/icons/mixed.jpg",
+        imageSrc: "/nav/icons/new.jpg",
       },
       {
         name: "New Arrivals",
         href: "/",
-        imageSrc: "/nav/icons/mixed.jpg",
+        imageSrc: "/nav/icons/picks.jpg",
       },
       {
         name: "Best selling products",
         href: "/",
-        imageSrc: "/nav/icons/mixed.jpg",
+        imageSrc: "/nav/icons/picks.jpg",
       },
     ],
   },

@@ -24,7 +24,7 @@ export default buildConfig({
     user: "users",
     bundler: webpackBundler(),
     meta: {
-      titleSuffix: "- Strathmall",
+      titleSuffix: "Strathmall",
       favicon: "/favicon.ico",
       ogImage: "/thumbnail.jpg",
     },
